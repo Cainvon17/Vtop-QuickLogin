@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "University Auto Login",
+  "version": "1.0.0",
+  "description": "Personal university portal assistant",
+  "permissions": ["activeTab", "tabs"],
+  "host_permissions": [
+    "https://vtop.vit.ac.in/vtop/login"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://vtop.vit.ac.in/vtop/login"
+      ],
+      "js": ["config.js",
+      "content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
